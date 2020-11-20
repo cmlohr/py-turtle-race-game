@@ -20,16 +20,16 @@ user_input = screen.textinput(title="Place your bet!", prompt="Select the winnin
 
 
 if user_input:
-    race = True
+    race_cont = True
 
-while race:
+while race_cont:
 
     for turtle in list_of_turtles:
-        if turtle.xcor() > 215:
-            race = False
+        if turtle.xcor() > 220:
+            race_cont = False
             winner = turtle.pencolor()
             if winner == user_input:
-    
+
                 print(f"Winner! The {winner} turtle wins!")
             else:
                 print(f"Loser! The {winner} turtle wins!")
